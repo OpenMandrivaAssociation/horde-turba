@@ -15,6 +15,7 @@ URL:		http://www.horde.org/%{module}/
 Requires(post):	rpm-helper
 Requires:	horde >= 3.0.2-2mdk
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Turba is the Horde contact management application, which allows access

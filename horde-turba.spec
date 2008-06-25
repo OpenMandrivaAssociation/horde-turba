@@ -1,7 +1,7 @@
 %define	module	turba
 %define	name	horde-%{module}
-%define version 2.2
-%define release %mkrel 3
+%define version 2.2.1
+%define release %mkrel 1
 %define _requires_exceptions pear(.*)
 
 Name: 		%{name}
@@ -10,7 +10,7 @@ Release: 	%{release}
 Summary:	The Horde contact manager
 License:	LGPL
 Group:		System/Servers
-Source:		ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.bz2
+Source:		ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 URL:		http://www.horde.org/%{module}/
 Requires(post):	rpm-helper
 Requires:	horde >= 3.0.2-2mdk

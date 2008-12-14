@@ -1,6 +1,6 @@
 %define	module	turba
 %define	name	horde-%{module}
-%define version 2.3
+%define version 2.3.1
 %define release %mkrel 1
 %define _requires_exceptions pear(.*)
 

@@ -13,7 +13,7 @@ Group:		System/Servers
 Source:		ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 URL:		http://www.horde.org/%{module}/
 Requires(post):	rpm-helper
-Requires:	horde >= 3.0.2-2mdk
+Requires:	horde >= 3.3.5
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 

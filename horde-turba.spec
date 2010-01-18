@@ -1,7 +1,7 @@
 %define	module	turba
 %define	name	horde-%{module}
 %define version 2.3.2
-%define release %mkrel 3
+%define release %mkrel 4
 %define _requires_exceptions pear(.*)
 
 Name: 		%{name}
@@ -119,10 +119,14 @@ if [ $1 = 1 ]; then
 	%create_ghostfile %{_sysconfdir}/horde/%{module}/conf.php apache apache 644
 	%create_ghostfile %{_sysconfdir}/horde/%{module}/conf.php.bak apache apache 644
 fi
+%if %mdkversion < 201010
 %_post_webapp
+%endif
 
 %postun
+%if %mdkversion < 201010
 %_postun_webapp
+%endif
 
 %files
 %defattr(-,root,root)

@@ -1,7 +1,7 @@
 %define	module	turba
 %define	name	horde-%{module}
 %define version 2.3.2
-%define release %mkrel 4
+%define release %mkrel 3
 %define _requires_exceptions pear(.*)
 
 Name: 		%{name}
@@ -15,7 +15,6 @@ URL:		http://www.horde.org/%{module}/
 Requires(post):	rpm-helper
 Requires:	horde >= 3.3.5
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Turba is the Horde contact management application, which allows access

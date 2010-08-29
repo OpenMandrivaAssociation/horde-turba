@@ -1,7 +1,7 @@
 %define	module	turba
 %define	name	horde-%{module}
 %define version 2.3.4
-%define release %mkrel 1
+%define release %mkrel 2
 %define _requires_exceptions pear(.*)
 
 Name: 		%{name}
@@ -14,6 +14,7 @@ Source:		ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 URL:		http://www.horde.org/%{module}/
 Requires(post):	rpm-helper
 Requires:	horde >= 3.3.5
+Requires:	php-pear-Net_LDAP
 BuildArch:	noarch
 
 %description

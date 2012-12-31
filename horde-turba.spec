@@ -1,16 +1,13 @@
 %define	module	turba
 %define	name	horde-%{module}
-%define version 2.3.5
-%define release %mkrel 1
-%define _requires_exceptions pear(.*)
 
 Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
+Version: 	2.3.6
+Release: 	1
 Summary:	The Horde contact manager
 License:	LGPL
 Group:		System/Servers
-Source:		ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
+Source:		ftp://ftp.horde.org:21/pub/turba/turba-h3-%{version}.tar.gz
 URL:		http://www.horde.org/%{module}/
 Requires(post):	rpm-helper
 Requires:	horde >= 3.3.5
@@ -29,8 +26,6 @@ with IMP (Horde's webmail application) as its address book.
 %build
 
 %install
-rm -rf %{buildroot}
-
 # apache configuration
 install -d -m 755 %{buildroot}%{_webappconfdir}
 cat > %{buildroot}%{_webappconfdir}/%{name}.conf <<EOF
@@ -110,23 +105,12 @@ done
 rm -f %{buildroot}%{_datadir}/horde/%{module}/scripts/Turba.reg
 
 
-%clean
-rm -rf %{buildroot}
-
 %post
 if [ $1 = 1 ]; then
 	# generate configuration
 	%create_ghostfile %{_sysconfdir}/horde/%{module}/conf.php apache apache 644
 	%create_ghostfile %{_sysconfdir}/horde/%{module}/conf.php.bak apache apache 644
 fi
-%if %mdkversion < 201010
-%_post_webapp
-%endif
-
-%postun
-%if %mdkversion < 201010
-%_postun_webapp
-%endif
 
 %files
 %defattr(-,root,root)
@@ -296,4 +280,5 @@ fi
 - untagged localisation files
 - no more .htaccess files, use /etc/httpd/conf.d/%%{order}_turba.conf instead
 - scripts now in  /usr/share/{name}
+
 

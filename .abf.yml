@@ -1,2 +1,4 @@
+removed_sources:
+  turba-h3-2.3.5.tar.gz: 9631efe8c5417b6e3a39ef182b387847e3fc5fa8
 sources:
-  "turba-h3-2.3.5.tar.gz": 9631efe8c5417b6e3a39ef182b387847e3fc5fa8
+  turba-h3-2.3.6.tar.gz: afc1615d460b7e982918dd1557728adffa7750a6

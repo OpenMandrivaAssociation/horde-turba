@@ -1,9 +1,8 @@
 %define	module	turba
-%define	name	horde-%{module}
 
-Name: 		%{name}
+Name: 		horde-%{module}
 Version: 	2.3.6
-Release: 	1
+Release: 	2
 Summary:	The Horde contact manager
 License:	LGPL
 Group:		System/Servers
@@ -109,7 +108,6 @@ if [ $1 = 1 ]; then
 fi
 
 %files
-%defattr(-,root,root)
 %doc README LICENSE docs
 %config(noreplace) %{_webappconfdir}/%{name}.conf
 %config(noreplace) %{_sysconfdir}/horde/registry.d/%{module}.php

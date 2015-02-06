@@ -3,7 +3,7 @@
 
 Name: 		horde-%{module}
 Version: 	2.3.6
-Release: 	3
+Release: 	4
 Summary:	The Horde contact manager
 
 License:	LGPL

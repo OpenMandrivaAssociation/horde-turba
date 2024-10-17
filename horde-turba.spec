@@ -9,7 +9,7 @@ Summary:	The Horde contact manager
 License:	LGPL
 Group:		System/Servers
 Source:		ftp://ftp.horde.org:21/pub/turba/turba-h3-%{version}.tar.gz
-URL:		http://www.horde.org/%{module}/
+URL:		https://www.horde.org/%{module}/
 Requires(post):	rpm-helper
 Requires:	horde >= 3.3.5
 Requires:	php-pear-Net_LDAP
